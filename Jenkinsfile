@@ -7,5 +7,14 @@ pipeline {
                 sh 'mvn --version'
             }
         }
+        stage('test') {
+            steps {
+                
+            }
+            
+        }
+        stage('deploy') {
+            
+        }
     }
 }
