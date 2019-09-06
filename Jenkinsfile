@@ -2,7 +2,7 @@
 pipeline {
     agent any
     stages {
-        stage ('checkout') {
+        stage('checkout') {
             steps {
                checkout scm                 
             }
@@ -12,6 +12,11 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-             
+        stage('package') {
+            steps {
+                xldCreatePackage artifactsPath: '/var/lib/jenkins/workspace/xld-petclinic/target/', darPath: '/var/lib/jenkins/workspace/xld-petclinic/output.dar', manifestPath: '/var/lib/jenkins/workspace/xld-petclinic/deployit-manifest.xml'
+            }
+        }
+                     
     }
 }
