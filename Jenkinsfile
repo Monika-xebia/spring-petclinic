@@ -14,7 +14,7 @@ pipeline {
         }
         stage('package') {
             steps {
-                xldCreatePackage artifactsPath: '/var/lib/jenkins/workspace/xld-petclinic/target/', darPath: 'output.dar', manifestPath: 'deployit-manifest.xml'
+                xldCreatePackage artifactsPath: '/target/', darPath: 'output.dar', manifestPath: 'deployit-manifest.xml'
             }
         }
                      
