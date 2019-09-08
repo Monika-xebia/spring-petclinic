@@ -12,11 +12,6 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-        stage('package') {
-            steps {
-                xldCreatePackage artifactsPath: '/target/', darPath: 'output.dar', manifestPath: 'deployit-manifest.xml'
-            }
-        }
-                     
+                             
     }
 }
