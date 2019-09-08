@@ -6,26 +6,12 @@
   <groupId>org.springframework.samples</groupId>
   <artifactId>spring-petclinic</artifactId>
   <version>2.1.0.BUILD-SNAPSHOT</version>
-     <build>
-    <plugins>
-     <plugin>
-       <packaging>war</packaging>
-     </plugin>
-    </plugins>
-  </build>
-    
+   
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
     <version>2.1.6.RELEASE</version>
-       <build>
-    <plugins>
-     <plugin>
-       <packaging>war</packaging>
-     </plugin>
-    </plugins>
-  </build>
-     </parent>
+  </parent>
   <name>petclinic</name>
 
   <properties>
