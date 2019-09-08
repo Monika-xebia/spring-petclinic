@@ -17,6 +17,11 @@ pipeline {
              xldCreatePackage artifactsPath: '/target/', darPath: 'petclinic-test.dar', manifestPath: 'deployit-manifest.xml'   
             }
         }
+        stage('publish') {
+            steps {
+                xldPublishPackage darPath: 'petclinic-test1.dar', serverCredentials: 'admin -credentials'
+            }
+        }
                              
     }
 }
